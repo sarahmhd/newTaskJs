@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color1: #3494e4;
+  --dark-blue: #144fc6;
+  --color: #fff;
+}
+
+body {
+  background: var(--bg-color1);
+  user-select: none;
+  /* height: 100vh; */
+  /* font-family: arial; */
+  font-family: "Roboto Mono", monospace;
+}
+.all {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--color);
+}
+
+.form {
+  margin: 10px 0;
+  gap: 10px;
+  display: flex;
+}
+.form input,
+.del,
+.add {
+  border: none;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.form input[type="text"] {
+  padding: 10px;
+  color: blue;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.12);
+}
+
+.form .add,
+.del {
+  background: var(--dark-blue);
+  color: var(--color);
+  padding: 10px 20px;
+}
+.form .add:hover {
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.12);
+}
+input:focus {
+  outline: none;
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.del {
+  cursor: pointer;
+  padding: 10px;
+  background: rgb(179, 12, 12);
+}
+
+@media (max-width: 414px) {
+  .all,
+  .products {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .form {
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  .form input {
+    width: 60%;
+  }
+  .form .add {
+    width: 30%;
+  }
+}
